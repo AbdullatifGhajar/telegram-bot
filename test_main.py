@@ -14,7 +14,7 @@ given = pytest.mark.parametrize
         ("print(1/0)", "ERROR: division by zero"),
     ]
 )
-def test_keep_non_interested_code(message: str, expected_result: str):
+def test_execute_text(text: str, expected_result: str):
     # get a clean string, e.g. replace \n with newline character
-    message = message.replace(r"\\n", "\n")
-    assert execute_text(message).strip() == expected_result
+    text = text.replace(r"\\n", "\n")
+    assert execute_text(text).strip() == expected_result
