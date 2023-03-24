@@ -6,7 +6,7 @@ given = pytest.mark.parametrize
 
 
 @given(
-    "message, expected_result",
+    "text, expected_result",
    [ 
         ("", "ERROR: no text is provided"),
         ("print(1 + 1)", "2"),
